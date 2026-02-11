@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(EnchantmentMenu.class)
 public abstract class EnchantmentMenuMixin {
     @Dynamic
-    @Redirect(method = {"method_17411", "lambda$slotsChanged$0", "m_39483_"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/EnchantmentTableBlock;isValidBookShelf(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Z"), require = 0)
+    @Redirect(method = {"method_17411", "lambda$slotsChanged$0", "m_39483_"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/EnchantingTableBlock;isValidBookShelf(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Z"), require = 0)
     private boolean onEnchant(Level level, BlockPos tablePos, BlockPos offsetPos) {
         return false;
     }
